@@ -2,7 +2,7 @@
   "name": "prjctr-node-user-service",
   "version": "1.0.0",
   "description": "A basic node.js service with routes",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -31,6 +31,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^6.0.0",
     "koa": "^2.13.1",
+    "koa-bodyparser": "^4.3.0",
     "koa-logger": "^3.2.1",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",

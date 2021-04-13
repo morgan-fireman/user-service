@@ -6,7 +6,7 @@ const responseResolver = async (ctx, path) => {
     ctx.response.type = 'application/json';
     ctx.response.body = data;
   } catch (err) {
-    ctx.response.status = 500;
+    ctx.status = 500;
   }
 };
 

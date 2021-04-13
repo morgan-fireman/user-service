@@ -7,7 +7,7 @@ const app = new Koa();
 const port = 3000;
 
 app.use(logger());
-app.use(router('/users'));
+app.use(router);
 
 app.listen(port, () => {
   // eslint-disable-next-line no-console

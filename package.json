@@ -4,7 +4,10 @@
   "description": "A basic node.js service with routes",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --debug src/",
+    "lint:write": "eslint --debug src/ --fix",
+    "prettier": "prettier --write src/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -33,16 +36,18 @@
     "koa": "^2.13.1",
     "koa-bodyparser": "^4.3.0",
     "koa-logger": "^3.2.1",
+    "lint": "^0.7.0",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
-    "pretty-quick": "^3.1.0"
+    "pretty-quick": "^3.1.0",
+    "yarn": "^1.22.10"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && lint-staged"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "*.(js|jsx)": ["npm run lint:write", "git add"]
   }
 }

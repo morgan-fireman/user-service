@@ -9,10 +9,7 @@
     "lint:write": "eslint --debug src/ --fix",
     "prettier": "prettier --write src/**/*.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/morgan-fireman/user-service.git"
-  },
+  "repository": "git+https://github.com/morgan-fireman/user-service.git",
   "keywords": [
     "node.js",
     "js"
@@ -24,6 +21,7 @@
   },
   "homepage": "https://github.com/morgan-fireman/user-service#readme",
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "eslint": "^7.24.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -48,6 +46,10 @@
     }
   },
   "lint-staged": {
-    "*.(js|jsx)": ["npm run lint:write", "git add"]
-  }
+    "*.(js|jsx)": [
+      "npm run lint:write",
+      "git add"
+    ]
+  },
+  "private": null
 }
